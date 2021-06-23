@@ -19,11 +19,8 @@ html {
     color: var(--color1);
     scroll-behavior: smooth;
     font-size: 16px;
+    letter-spacing: 2px;
     font-family: 'Open Sans', sans-serif;
-}
-
-img {
-    width: 50vw;
 }
 
 
@@ -187,9 +184,20 @@ img {
 
 
 
+
+/*! To make it show bellow navbar */
 .main {
     padding-top: 50px;
 }
+
+
+
+
+
+
+
+
+
 
 /* HEADER SECTION */
 .section-header {
@@ -224,11 +232,105 @@ img {
 
 /* HEADER RESPONSIVE */
 @media screen and (max-width: 768px) {
+    .section-header img {
+        margin-top: -200px;
+    }
+
     .section-header h1 {
         font-size: 6em;
     }
 
     .section-header p {
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* CURRENTLY PLAYING SECTION */
+.section-game-on-playing {
+    background-color: var(--color4);
+    padding: 64px 32px;
+    text-align: center;
+}
+
+.section-game-on-playing h2 {
+    font-size: 2.75em;
+    font-family: inherit;
+    font-weight: bold;
+    letter-spacing: 4px;
+    padding-bottom: 16px;
+    border-bottom: solid 3px var(--color1);
+}
+
+.game-list {
+    padding: 32px 16px;
+    margin-bottom: 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-section {
+    padding: 16px;
+    margin: 32px 0 0 0;
+}
+
+.game-section h3 {
+    font-family: inherit;
+    font-size: 1.75em;
+    letter-spacing: 1px;
+    padding: 16px;
+}
+
+.game-section img {
+    width: 600px;
+    border: solid 3px var(--color1);
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.game-section p {
+    font-family: inherit;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    padding: 16px;
+}
+
+/* CURRENTLY PLAYING RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .section-game-on-playing {
+        padding: 64px 16px;
+    }
+
+    .section-game-on-playing h2 {
+        font-size: 2em;
+    }
+
+    .game-section, .game-list {
+        padding: 0;
+    }
+
+    .game-section {
+        margin: 64px 0 0 0;
+    }
+
+    .game-section h3 {
+        font-size: 1.25em;
+    }
+
+    .game-section img {
+        width: 90vw;
+    }
+
+    .game-section p {
         font-size: 1em;
     }
 }
