@@ -59,11 +59,15 @@ img {
 }
 
 .link {
-    font-family: inherit;
+    text-decoration: none;
     font-size: 1.25em;
+    padding: 0 32px;
+}
+
+.link a {
+    font-size: inherit;
     color: inherit;
     text-decoration: none;
-    padding: 0 32px;
 }
 
 .link-desc {
@@ -144,6 +148,10 @@ img {
     .link {
         padding: 0;
         font-size: 2em;
+    }
+
+    .link a {
+        font-size: inherit;
     }
 
     .link-desc {
