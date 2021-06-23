@@ -1,0 +1,23 @@
+@keyframes link-desc-animate {
+    0% {
+        opacity: .9;
+        right: 0;
+    }
+
+    100% {
+        opacity: 0;
+        right: 10%;
+    }
+}
+
+@keyframes link-desc-animate-out {
+    0% {
+        opacity: 0;
+        right: 10%;
+    }
+
+    100% {
+        opacity: .9;
+        right: 0;
+    }
+}
