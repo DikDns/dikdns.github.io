@@ -405,3 +405,56 @@ html {
         margin: 16px 0;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* FOOTER SECTION */
+.footer {
+    padding: 32px 0;
+    background-color: var(--color5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color2);
+}
+
+.footer-copyright {
+    padding: 16px 0;
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+
+.footer-copyright a {
+    color: inherit;
+}
+
+.footer-link {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-link .link {
+    font-family: inherit;
+    font-size: .75em;
+    letter-spacing: 1px;
+    color: var(--color2);
+    text-decoration: none;
+}
+
+/* FOOTER RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .footer-link {
+        display: none;
+    }
+
+    .footer-copyright {
+        letter-spacing: 1px;
+    }
+}
