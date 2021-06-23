@@ -7,3 +7,11 @@ menuToggle.addEventListener('click', function(){
 });
 
 
+
+// Close it if the user click outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.btn-toggle')){
+        nav.classList.remove('slide');
+        document.querySelector('.btn-toggle').checked = false;
+    }
+};
