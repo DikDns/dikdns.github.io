@@ -1,0 +1,12 @@
+@keyframes link-desc-animate {
+
+    from {
+        opacity: .9;
+        right: 0;
+    }
+
+    to {
+        opacity: 0;
+        right: 10%;
+    }
+}

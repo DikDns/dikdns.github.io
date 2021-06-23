@@ -69,15 +69,12 @@ img {
 .link-desc {
     position: relative;
     display: inline;
-    opacity: 0;
-    right: 10%;
-    transition: 500ms;
     pointer-events: none;
+    animation: link-desc-animate 500ms;
 }
 
 .link:hover > .link-desc {
-    opacity: .9;
-    right: 0;
+    animation: link-desc-animate 500ms;
 }
 
 .nav-menu-toggle {
