@@ -261,7 +261,7 @@ html {
     text-align: center;
 }
 
-.section-game-on-playing h2 {
+.section-title {
     font-size: 2.75em;
     font-family: inherit;
     font-weight: bold;
@@ -310,7 +310,7 @@ html {
         padding: 64px 16px;
     }
 
-    .section-game-on-playing h2 {
+    .section-title {
         font-size: 2em;
     }
 
@@ -332,5 +332,76 @@ html {
 
     .game-section p {
         font-size: 1em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* CONTACT SECTINON */
+.section-contact {
+    padding: 64px 32px;
+    text-align: center;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 32px 0;
+}
+
+.contact p {
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.contact-list {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-list .link {
+    font-family: inherit;
+    font-size: 1.5em;
+    color: inherit;
+    letter-spacing: 6px;
+    padding: 16px;
+    transition: 250ms;
+}
+
+.contact-list .link .icon {
+    font-size: 1.75em;
+}
+
+.contact-list .link:hover {
+    color: var(--color2);
+}
+
+/* CONTACT RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .contact p {
+        text-align: center;
+        margin: 32px;
+    }
+
+    .contact-list {
+        align-items: center;
+    }
+
+    .contact-list .link {
+        margin: 16px 0;
     }
 }
