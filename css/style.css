@@ -1,3 +1,27 @@
+/* Import Fonts Google */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+/* Root Colors Variable */
+:root {
+    --color1: #000;
+    --color2: #333;
+    --color3: #666;
+    --color4: #fef;
+    --color5: #fff;
+}
+
+
+
+/* Parent Style */
+html {
+    scroll-behavior: smooth;
+}
+
 img {
     width: 50vw;
 }
+
+
+
+/* My CSS */
