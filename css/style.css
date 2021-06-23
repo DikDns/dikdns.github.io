@@ -70,11 +70,14 @@ img {
     position: relative;
     display: inline;
     pointer-events: none;
-    animation: link-desc-animate-in 500ms ease-in forwards;
+    transition: 500ms;
+    opacity: 0;
+    right: 10%;
 }
 
 .link:hover > .link-desc {
-    animation: link-desc-animate-out 500ms ease-out forwards;
+    opacity: .9;
+    right: 0;
 }
 
 .nav-menu-toggle {
