@@ -33,6 +33,8 @@ img {
     width: 100%;
     color: var(--color4);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-header {
