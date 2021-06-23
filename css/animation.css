@@ -1,4 +1,4 @@
-@keyframes link-desc-animate {
+@keyframes link-desc-animate-in {
 
     from {
         opacity: .9;
@@ -8,5 +8,18 @@
     to {
         opacity: 0;
         right: 10%;
+    }
+}
+
+@keyframes link-desc-animate-out {
+
+    from {
+        opacity: 0;
+        right: 10%;
+    }
+
+    to {
+        opacity: .9;
+        right: 0;
     }
 }
