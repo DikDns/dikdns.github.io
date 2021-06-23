@@ -5,3 +5,5 @@ const nav = document.querySelector('.nav .nav-link');
 menuToggle.addEventListener('click', function(){
     nav.classList.toggle('slide')
 });
+
+

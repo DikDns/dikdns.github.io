@@ -36,6 +36,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
 .nav-header {
@@ -69,27 +70,24 @@ img {
     position: relative;
     display: inline;
     pointer-events: none;
-    animation: link-desc-animate 500ms ease-in 0ms 1 forwards;
+    animation: link-desc-animate-in 500ms ease-in 0ms 1 forwards;
 }
 
 .link:hover > .link-desc {
     animation: link-desc-animate-out 500ms 0ms 1;
 }
 
-.nav-menu-toggle {
-    display: none;
-}
-
 
 
 /* HAMBURGER MENU */
 .nav-menu-toggle {
-    margin: auto;
+    margin-right: 64px;
     display: none;
     flex-direction: column;
     height: 20px;
     justify-content: space-between;
     position: relative;
+    z-index: 3;
 }
 
 .nav-menu-toggle input {
@@ -100,7 +98,7 @@ img {
     top: -4px;
     opacity: 0;
     cursor: pointer;
-    z-index: 3;
+    z-index: 4;
 }
 
 .nav-menu-toggle span {
@@ -122,18 +120,40 @@ img {
 
     .nav-link {
         position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: unset;
         right: 0;
         top: 0;
         width: 100vw;
         height: 100vh;
-        background: var(--color1);
-        z-index: -1;
+        background: var(--color2);
+        z-index: 2;
         transform: translateY(-100%);
         opacity: .5;
         transition: all 500ms;
+    }
+
+    .nav-link ul {
+        height: inherit;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .nav-link ul li {
+        text-align: center;
+    }
+
+    .link {
+        padding: 0;
+        font-size: 2em;
+    }
+
+    .link-desc {
+        display: block;
+        position: static;
+        animation: link-desc-animate 1.5s ease-out 1s alternate infinite;
+    }
+
+    .link:hover > .link-desc {
+        animation: link-desc-animate reverse forwards;
     }
 
     .nav-link.slide {

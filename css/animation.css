@@ -1,4 +1,4 @@
-@keyframes link-desc-animate {
+@keyframes link-desc-animate-in {
     0% {
         opacity: .9;
         right: 0;
@@ -22,6 +22,17 @@
     }
 }
 
+@keyframes link-desc-animate {
+    0% {
+        opacity: .95;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 
 /* HAMBURGER MENU ANIMATION */
