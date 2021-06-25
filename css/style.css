@@ -1,6 +1,7 @@
 /* Import Fonts Google */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif; */
 
 /* Root Colors Variable */
 :root {
@@ -20,7 +21,7 @@ html {
     scroll-behavior: smooth;
     font-size: 16px;
     letter-spacing: 2px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 
