@@ -1,27 +1,53 @@
-/* Import Fonts Google */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
-/* font-family: 'Poppins', sans-serif;
-font-family: 'Raleway', sans-serif; */
 
-/* Root Colors Variable */
+
+
+
+
+/*****************************************************************/
+/*!                     NOTES OF THIS STYLE
+    desktop:
+        font    :   16px
+
+    mobile:
+        font    :   14px
+
+    content style:
+        h1          :       4em
+        h2          :       2em
+        p           :       1.25em
+        pad-topbot  :       128px
+*/
+/*****************************************************************/
+
+
+
+
+
+/*! Import Fonts Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
+
+/*! Root Colors Variable */
 :root {
-    --color1: #C9E7F2;
-    --color2: #468BA6;
-    --color3: #295773;
-    --color4: #377BA6;
-    --color5: #192E40;
+    --color1: #CAF0F8;
+    --color2: #0096C7;
+    --color3: #0077B6;
+    --color4: #023E8A;
+    --color5: #03045E;
 }
 
-
-
-/* Parent Style */
+/*! Parent Style */
 html {
-    background-color: var(--color3);
-    color: var(--color1);
+    /* Smooth Scrolling */
     scroll-behavior: smooth;
+    
+    /* Colors */
+    background-color: var(--color4);
+    color: var(--color1);
+
+    /* Fonts Parents */
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     letter-spacing: 2px;
-    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -33,149 +59,618 @@ html {
 
 
 
-/* NAVBAR */
+
+
+
+
+
+
+
+
+
+
+/*! NAVBAR CSS */
 .nav {
+    /* Colors */
     background-color: var(--color5);
-    position: fixed;
+    color: var(--color3);
+
+    /* Layouts */
     width: 100%;
     height: 50px;
-    color: var(--color2);
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    /* Layers */
     z-index: 1;
 }
 
+
+/** Left NavBar: Header and Lang Button **/
+.nav-box {
+    /* To group Header and Language Dropdown btn */
+    display: flex;
+    align-items: center;
+}
+
 .nav-header {
-    padding: 0 16px;
-    margin-left: 16px;
-    font-family: inherit;
+    /* Fonts */
+    font-family: 'Raleway', sans-serif;
     font-size: 1.75em;
     color: inherit;
     text-decoration: none;
+
+    /* Layouts */
+    margin-left: 16px;
 }
 
+
+/** Lang Dropdown Button CSS **/
+.nav-lang {
+    /** First Box of the Dropdown */
+    /* Fonts */
+    letter-spacing: 1px;
+    font-family: inherit;
+    font-size: 1em;
+
+    /* Layouts */
+    margin-left: 12px;
+}
+
+.lang-button {  
+    /** The button */
+    /* Fonts */
+    font-size: 1em;
+
+    /* Layouts */
+    border: none;
+    background: none;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Smooth Animation */
+    transition: color 250ms;
+    color: inherit;
+}
+
+.dropdown {
+    /** Last Box of the Dropdown */
+    /* Layouts */
+    position: relative;
+    display: inline-block;
+}
+
+.list {
+    /** List of the Language */
+    /* Fonts */
+    text-align: left;
+
+    /* Colors */
+    background-color: var(--color5);
+
+    /* Layouts */
+    width: 192px;
+    left: 0px;
+    display: block;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    /* To make it unclickable */
+    pointer-events: none;
+
+    /* Smooth Animation */
+    transition: opacity 250ms;
+    opacity: 0;
+
+    /* Layers */
+    z-index: -3;
+}
+
+.list a {
+    /* Smooth Animation */
+    transition: color 250ms;
+    color: var(--color3);
+
+    /* Fonts */
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    /* Layouts */
+    display: block;
+    padding: 16px 8px;
+}
+
+.list a:hover {
+    /* Fonts Color of tag a list language change when hover */
+    color: var(--color2);
+}
+
+.lang-button:hover {
+    /* Fonts Color of button language change when hover */
+    color: var(--color2);
+}
+
+.dropdown .arrow-icon {
+    /** Arrow Icons inside button language */
+    /* Fonts */
+    font-size: .75em;
+
+    /* Smooth Animation */
+    transition: transform 500ms;
+    transform: rotate(0deg);
+}
+
+.lang-button:focus > .arrow-icon {
+    /* Change direction of arrow icons when focused */
+    transition: transform 500ms;
+    transform: rotate(90deg);
+}
+
+
+/** Right NavBar: Link and Hamburger Menu **/
 .nav-link ul {
+    /* To set row direction of List Item */
     display: flex;
 }
 
-.nav-link ul li:nth-child(1) .fas {
-    padding-bottom: 2px;
-    border-bottom: solid 2px var(--color2) ;
-}
-
-.link {
-    text-decoration: none;
-    font-size: 1.25em;
-    padding: 0 32px;
-}
-
 .link a {
-    font-size: inherit;
+    /* Fonts */
+    font-size: 1.25em;
     color: inherit;
     text-decoration: none;
+    letter-spacing: 1px;
+
+    /* Layouts */
+    margin-right: 32px;
+
+    /* Smooth Animations */
+    transition: color 250ms;
+}
+
+.link:nth-child(1) a {
+    /* Layouts on Desktop Size distance between links simetrical*/
+    margin-right: 64px;
 }
 
 .link-desc {
+    /* Layouts for description of the icons*/
     position: relative;
     display: inline;
+
+    /* To make it unclickable */
     pointer-events: none;
+
+    /* Smooth Animations */
     animation: link-desc-animate-in 500ms ease-in 0ms 1 forwards;
 }
 
-.link:hover > .link-desc {
+
+/** HAMBURGER MENU THAT SHOW WHEN TABLET SIZE **/
+.nav-menu-toggle {
+    /** Box of the hamburger design **/
+    /* Layouts */
+    position: relative;
+    height: 20px;
+    margin-right: 16px;
+
+    /* Layers */
+    z-index: 3;
+
+    /* Smooth Animation */
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-menu-toggle input {
+    /** Checkbox Input fot the button to works **/
+    /* Layouts */
+    width: 40px;
+    height: 28px;
+    position: absolute;
+    left: -6px;
+    top: -4px;
+
+    /* Make it transparent */
+    opacity: 0;
+
+    /* Change cursor */
+    cursor: pointer;
+
+    /* Layers */
+    z-index: 4;
+}
+
+.nav-menu-toggle span {
+    /** Design of the Hamburger **/
+    /* Smooth Animation */
+    transition: all 500ms;
+
+    /* Colors */
+    background: var(--color3);
+
+    /* Layouts */
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+}
+
+
+/** Link Responsive **/
+.link:hover {
+    /* Fonts Color Change when we hover it */
+    color: var(--color2);
+}
+
+.link:hover .link-desc {
+    /* Smooth Animation on the Description Icons to show up */
     animation: link-desc-animate-out 500ms 0ms 1;
 }
 
 
 
-/* HAMBURGER MENU */
-.nav-menu-toggle {
-    margin-right: 64px;
-    display: none;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! MAIN CONTENT CSS */
+.main-section {
+    /** All of the content section box **/
+    /* Fonts */
+    font-family: inherit;
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: inherit;
+
+    /* Colors */
+    color: inherit;
+
+    /* Layouts */
+    padding: 128px 0;
+}
+
+.title-section {
+    /** All of the h2 title **/
+    /* Fonts */
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 4px;
+
+    /* Layouts */
+    padding: 4px 0;
+    margin: 4px 0;
+}
+
+.desc-section {
+    /* Fonts */
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 1.25em;
+    letter-spacing: inherit;
+    line-height: 24px;
+    text-align: justify;
+
+    /* Layouts */
+    width: 724px;
+    padding: 4px 0;
+    margin: 4px auto 64px;
+}
+
+
+/** Profile Section **/
+.main-section:nth-child(1) {
+    /* Layouts for the Profile Section */
+    height: 100vh;
+    padding: 0;
+}
+
+.profile-image {
+    /* Layouts */
+    width: 300px;
+    padding: 0 64px;
+    border-bottom: solid 3px var(--color1);
+
+    /* Image Center */
+    object-fit: cover;
+    object-position: center;
+}
+
+.title {
+    /* Fonts */
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+    letter-spacing: 4px;
+
+    /* Layouts */
+    padding: 4px 0;
+    margin: 4px 0;
+}
+
+.profile-desc {
+    /* Fonts */
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 1em;
+    letter-spacing: inherit;
+
+    /* Colors */
+    color: inherit;
+
+    /* Layouts */
+    margin: 16px 0;
+}
+
+
+/** After Profile Section **/
+.main-section:nth-child(2) {
+    /* Colors */
+    background-color: var(--color3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! FOOTER SECTION */
+.footer {
+    /* Fonts */
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: normal;
+    letter-spacing: 1px;
+
+    /* Colors */
+    background-color: var(--color5);
+    color: var(--color3);
+
+    /* Layouts */
+    padding: 32px 0 4px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'copyright link'
+        'copyright link'
+        'version version';
+    align-items: center;
+}
+
+.footer-section {
+    /** Every section of footer **/
+    /* Layouts */
+    padding: 2px 32px;
+    display: flex;
     flex-direction: column;
-    height: 20px;
-    justify-content: space-between;
-    position: relative;
-    z-index: 3;
-}
-
-.nav-menu-toggle input {
-    position: absolute;
-    width: 40px;
-    height: 28px;
-    left: -6px;
-    top: -4px;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 4;
-}
-
-.nav-menu-toggle span {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background: var(--color2);
-    border-radius: 3px;
-    transition: all .5s;
 }
 
 
+/** Copyright **/
+.footer-copyright {
+    /* Layouts */
+    text-align: left;
+    grid-area: copyright;
+}
 
-/* NAVBAR RESPONSIVE */
-@media screen and (max-width: 768px) {
-    .nav-menu-toggle {
-        display: flex;
+.desc-footer {
+    /* Layouts */
+    padding: 4px 0;
+}
+
+.desc-footer a {
+    /* Fonts */
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+    text-decoration: none;
+
+    /* Colors */
+    color: inherit;
+}
+
+.desc-footer a:hover {
+    /** Links on paragraf when hover */
+    text-decoration: underline;
+}
+
+
+/** Links **/
+.footer-link {
+    /* Layouts */
+    text-align: right;
+    grid-area: link;
+}
+
+.link {
+    /* Fonts */
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: normal;
+    text-decoration: none;
+    
+    /* Color */
+    color: inherit;
+
+    /* Layouts */
+    padding: 4px;
+
+    /* Smooth Animation */
+    transition: all 250ms;
+}
+
+.footer-link .link:hover {
+    /** Links when hover move left 15px */
+    transform: translateX(-15px);
+}
+
+
+/** Versions **/
+.footer-version {
+    /* Layouts */
+    margin: auto;
+    grid-area: version;
+
+    /* Fonts */
+    font-size: .75em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! Responsive Breakpoints */
+@media screen and (max-width: 1080px) {
+    /*! NavBar Responsive */
+    .link a {
+        /* New layouts for simetrical laptop size */
+        margin-right: 8px;
     }
+    
+    .link:nth-child(1) a {
+        /* New layouts for simetrical laptop size */
+        margin-right: 32px;
+    }
+}
 
+
+
+@media screen and (max-width: 824px) {
+    /*! NavBar Responsive */
     .nav-link {
+        /* Smooth Animation */
+        transition: all 500ms;
+
+        /* Colors */
+        background: var(--color5);
+
+        /* Layouts */
+        opacity: .75;
+        width: 100vw;
+        height: 100vh;
         position: absolute;
         right: 0;
         top: 0;
-        width: 100vw;
-        height: 100vh;
-        background: var(--color5);
-        z-index: 2;
         transform: translateY(-100%);
-        opacity: .5;
-        transition: all 500ms;
+
+        /* Layers */
+        z-index: 2;
+    }
+    
+
+    /** Language Button **/
+    .nav-lang {
+        /* Layouts */
+        position: static;
+        padding-left: 0;
     }
 
+    .list {
+        /* Layouts in the middle */
+        left: -48px;
+        text-align: center;
+    }
+
+    
+    /** Hamburger Menu Toggle **/
+    .nav-menu-toggle {
+        /* Layouts */
+        display: flex;
+    }
+
+    
+    /** Links **/
     .nav-link ul {
+        /* Layouts */
         height: inherit;
         flex-direction: column;
         justify-content: space-evenly;
     }
 
     .nav-link ul li {
+        /* Fonts */
         text-align: center;
     }
 
-    .link {
+    .nav-link .link {
+        /* Fonts */
+        font-size: 2.5em;
+
+        /* Layouts */
         padding: 0;
-        font-size: 2em;
     }
 
-    .link a {
-        font-size: inherit;
-    }
 
+    /** Icon Description Animation **/
     .link-desc {
+        /* Layouts */
         display: block;
         position: static;
+
+        /* Smooth Animation */
         animation: link-desc-animate 1.5s ease-out 1s alternate infinite;
     }
 
-    .link:hover > .link-desc {
+    .link:hover .link-desc {
+        /* Smooth Animation gone when hover */
         animation: link-desc-animate reverse forwards;
     }
 
-    .nav-link.slide {
-        opacity: 1;
-        transform: translateY(0);
-    }   
-
-}
 
 
 
@@ -186,10 +681,6 @@ html {
 
 
 
-/*! To make it show bellow navbar */
-.main {
-    padding-top: 50px;
-}
 
 
 
@@ -199,263 +690,108 @@ html {
 
 
 
-
-/* HEADER SECTION */
-.section-header {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.section-header img {
-    width: 200px;
-    margin-top: -150px;
-    border: var(--color1) solid 3px;
-    border-radius: 50%;
-}
-
-.section-header h1 {
-    font-family: inherit;
-    font-size: 8em;
-    font-weight: bold;
-    color: var(--color1);
-    padding: 32px 0 0 0;
-}
-
-.section-header p {
-    font-family: inherit;
-    font-size: 1.25em;
-    color: var(--color1);
-    padding: 16px;
-}
-
-/* HEADER RESPONSIVE */
-@media screen and (max-width: 768px) {
-    .section-header img {
-        margin-top: -200px;
+    /*! MAIN CSS RESPONSIVE */
+    .profile-image {
+        /* Layouts */
+        margin-top: 64px;
+        width: 250px;
     }
 
-    .section-header h1 {
-        font-size: 6em;
+    .title {
+        /* Fonts */
+        font-size: 3.5em;
+        letter-spacing: 2px;
     }
 
-    .section-header p {
-        font-size: 1em;
-    }
-}
+    .profile-desc {
+        /* Fonts */
+        letter-spacing: 1px;
+        line-height: 18px;
 
-
-
-
-
-
-
-
-
-
-/* CURRENTLY PLAYING SECTION */
-.section-game-on-playing {
-    background-color: var(--color4);
-    padding: 64px 32px;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.75em;
-    font-family: inherit;
-    font-weight: bold;
-    letter-spacing: 4px;
-    padding-bottom: 16px;
-    border-bottom: solid 3px var(--color1);
-}
-
-.game-list {
-    padding: 32px 16px;
-    margin-bottom: 128px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.game-section {
-    padding: 16px;
-    margin: 32px 0 0 0;
-}
-
-.game-section h3 {
-    font-family: inherit;
-    font-size: 1.75em;
-    letter-spacing: 1px;
-    padding: 16px;
-}
-
-.game-section img {
-    width: 600px;
-    border: solid 3px var(--color1);
-    border-radius: 20px;
-    object-fit: cover;
-}
-
-.game-section p {
-    font-family: inherit;
-    font-size: 1.25em;
-    letter-spacing: 1px;
-    padding: 16px;
-}
-
-/* CURRENTLY PLAYING RESPONSIVE */
-@media screen and (max-width: 768px) {
-    .section-game-on-playing {
-        padding: 64px 16px;
+        /* Layouts */
+        padding: 0 4px;
     }
 
-    .section-title {
-        font-size: 2em;
+    .desc-section {
+        /* Fonts */
+        letter-spacing: 1px;
+
+        /* Layouts */
+        width: 512px;
     }
 
-    .game-section, .game-list {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*! FOOTER RESPONSIVE */
+    .footer {
+        /* Layouts */
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'link link'
+            'copyright copyright'
+            'version version';
+    }
+
+    .footer-section {
+        /* Layouts change every section*/
         padding: 0;
     }
+    
 
-    .game-section {
-        margin: 64px 0 0 0;
-    }
-
-    .game-section h3 {
-        font-size: 1.25em;
-    }
-
-    .game-section img {
-        width: 90vw;
-    }
-
-    .game-section p {
-        font-size: 1em;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-/* CONTACT SECTINON */
-.section-contact {
-    padding: 64px 32px;
-    text-align: center;
-}
-
-.contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    margin: 32px 0;
-}
-
-.contact p {
-    text-align: left;
-    letter-spacing: 1px;
-}
-
-.contact-list {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.contact-list .link {
-    font-family: inherit;
-    font-size: 1.5em;
-    color: inherit;
-    letter-spacing: 6px;
-    padding: 16px;
-    transition: 250ms;
-}
-
-.contact-list .link .icon {
-    font-size: 1.75em;
-}
-
-.contact-list .link:hover {
-    color: var(--color2);
-}
-
-/* CONTACT RESPONSIVE */
-@media screen and (max-width: 768px) {
-    .contact {
-        grid-template-columns: 1fr;
-    }
-
-    .contact p {
-        text-align: center;
-        margin: 32px;
-    }
-
-    .contact-list {
-        align-items: center;
-    }
-
-    .contact-list .link {
-        margin: 16px 0;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-/* FOOTER SECTION */
-.footer {
-    padding: 32px 0;
-    background-color: var(--color5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--color2);
-}
-
-.footer-copyright {
-    padding: 16px 0;
-    font-size: 1em;
-    letter-spacing: 2px;
-}
-
-.footer-copyright a {
-    color: inherit;
-}
-
-.footer-link {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.footer-link .link {
-    font-family: inherit;
-    font-size: .75em;
-    letter-spacing: 1px;
-    color: var(--color2);
-    text-decoration: none;
-}
-
-/* FOOTER RESPONSIVE */
-@media screen and (max-width: 768px) {
+    /** Links **/
     .footer-link {
-        display: none;
+        /* New Layouts */
+        padding: 0 32px;
+        margin: 0 32px;
+        border-right: var(--color3) solid 3px;
     }
 
+    .link {
+        /* New Layouts */
+        padding: 8px 0;
+    }
+
+
+    /** Copyright **/
     .footer-copyright {
-        letter-spacing: 1px;
+        /* New Layouts */
+        text-align: center;
+        margin: auto;
+        padding: 32px 16px;
+    }
+}
+
+
+
+@media screen and (max-width: 564px) {
+    /*! Change Parents Font Size */
+    html {
+        font-size: 14px;
+    }
+
+    /*! Change Profile Section */
+    .title {
+        font-size: 3em;
+    }
+    
+    .desc-section {
+        width: 384px;
     }
 }
