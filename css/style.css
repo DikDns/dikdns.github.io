@@ -368,7 +368,7 @@ html {
     font-size: 1.25em;
     letter-spacing: inherit;
     line-height: 24px;
-    text-align: justify;
+    text-align: center;
 
     /* Layouts */
     width: 724px;
@@ -740,13 +740,13 @@ html {
     /*! MAIN CSS RESPONSIVE */
     .profile-image {
         /* Layouts */
-        margin-top: 64px;
+        margin-top: 32px;
         width: 250px;
     }
 
     .title {
         /* Fonts */
-        font-size: 3.5em;
+        font-size: 3em;
         letter-spacing: 2px;
     }
 
@@ -760,13 +760,21 @@ html {
     }
 
     .desc-section {
-        /* Fonts */
-        letter-spacing: 1px;
-
         /* Layouts */
-        width: 512px;
+        width: 372px;
+        padding: 4px 0;
+        margin: 4px auto 64px;
+    }
+    
+    .game-image {
+        /* Layouts */
+        width: 500px;
     }
 
+    .game-desc {
+        /* Fonts */
+        line-height: 16px;
+    }
 
 
 
@@ -833,12 +841,19 @@ html {
         font-size: 14px;
     }
 
-    /*! Change Profile Section */
-    .title {
-        font-size: 3em;
-    }
-    
-    .desc-section {
-        width: 384px;
+
+
+
+
+
+
+
+
+
+
+    /*! MAIN CSS */
+    .game-image {
+        /* Layouts */
+        width: 400px;
     }
 }
