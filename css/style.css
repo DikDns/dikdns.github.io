@@ -447,9 +447,15 @@ html {
     padding: 32px 16px;
 }
 
+.game-section .icons {
+    /* Fonts */
+    font-size: .75em;
+}
+
 .game-image {
     /* Layouts */
     width: 600px;
+    margin: 4px 0;
     border: solid 3px var(--color1);
     border-radius: 15px;
 
