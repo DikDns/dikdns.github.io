@@ -230,11 +230,6 @@ html {
     transition: color 250ms;
 }
 
-.link:nth-child(1) a {
-    /* Layouts on Desktop Size distance between links simetrical*/
-    margin-right: 64px;
-}
-
 .link-desc {
     /* Layouts for description of the icons*/
     position: relative;
