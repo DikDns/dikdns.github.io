@@ -435,16 +435,21 @@ html {
     background-color: var(--color3);
 }
 
+.main-section:nth-child(2) .desc-section {
+    margin: auto;
+}
+
 .game-list {
     /* Layouts */
-    padding: 16px 0;
+    padding-top: 64px;
     display: flex;
     flex-direction: column;
 }
 
 .game-section {
     /* Layouts */
-    padding: 32px 16px;
+    padding: 0 16px;
+    margin-bottom: 288px;
 }
 
 .game-section .icons {
@@ -453,7 +458,7 @@ html {
 
     /* Smooth Animation */
     animation-name: icon-animate;
-    animation-delay: 2000ms;
+    animation-delay: 2500ms;
     animation-duration: 500ms;
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
@@ -477,9 +482,11 @@ html {
     font-family: inherit;
     font-weight: normal;
     font-size: 1em;
+    letter-spacing: 1px;
+
+    /* Layouts */
+    padding: 4px 8px;
 }
-
-
 
 
 
