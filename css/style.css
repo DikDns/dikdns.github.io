@@ -216,6 +216,13 @@ html {
     display: flex;
 }
 
+.link:nth-child(1) .icons {
+    /** Page Indicator **/
+    /* Layouts */
+    border-bottom: var(--color3) solid 3px;
+    padding-bottom: 1px;
+}
+
 .link a {
     /* Fonts */
     font-size: 1.25em;
