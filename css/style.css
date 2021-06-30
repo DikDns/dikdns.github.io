@@ -219,7 +219,7 @@ html {
 .link:nth-child(1) .icons {
     /** Page Indicator **/
     /* Layouts */
-    border-bottom: var(--color3) solid 3px;
+    border-bottom: var(--color3) solid 2px;
     padding-bottom: 1px;
 }
 
