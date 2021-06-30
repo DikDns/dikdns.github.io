@@ -450,6 +450,14 @@ html {
 .game-section .icons {
     /* Fonts */
     font-size: .75em;
+
+    /* Smooth Animation */
+    animation-name: icon-animate;
+    animation-delay: 2000ms;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .game-image {

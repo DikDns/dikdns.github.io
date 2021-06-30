@@ -43,6 +43,25 @@
 
 
 
+/* Icons Animations */
+@keyframes icon-animate {
+    0% {
+        transform: translateY(0px) rotate(-2deg);
+    }
+    100% {
+        transform: translateY(-5px) rotate(4deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 /* HAMBURGER MENU ANIMATION */
 .nav-menu-toggle span:nth-child(2) {
