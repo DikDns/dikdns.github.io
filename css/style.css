@@ -483,6 +483,7 @@ html {
     font-weight: normal;
     font-size: 1em;
     letter-spacing: 1px;
+    line-height: 20px;
 
     /* Layouts */
     padding: 8px 16px;
@@ -496,6 +497,7 @@ html {
 }
 
 .main-section:nth-child(3) .desc-section {
+    /* Layouts */
     margin: auto;
 }
 
@@ -783,7 +785,7 @@ html {
 
     .game-desc {
         /* Fonts */
-        line-height: 16px;
+        line-height: 18px;
     }
 
 
