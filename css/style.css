@@ -379,14 +379,21 @@ html {
 .main-section:nth-child(1) {
     /* Layouts for the Profile Section */
     height: 100vh;
-    padding: 0;
+    padding: 32px 0;
+    box-sizing: border-box;
+}
+
+.main-section:nth-child(1) .title {
+    /* Fonts */
+    font-size: 6em;
+    letter-spacing: 8px;
 }
 
 .profile-image {
     /* Layouts */
     width: 300px;
-    padding: 0 64px;
-    border-bottom: solid 3px var(--color1);
+    border: solid 3px var(--color1);
+    border-radius: 50%;
 
     /* Image Center */
     object-fit: cover;
