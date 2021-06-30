@@ -583,11 +583,6 @@ html {
         /* New layouts for simetrical laptop size */
         margin-right: 8px;
     }
-    
-    .link:nth-child(1) a {
-        /* New layouts for simetrical laptop size */
-        margin-right: 32px;
-    }
 }
 
 
