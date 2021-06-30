@@ -429,10 +429,33 @@ html {
 }
 
 
-/** After Profile Section **/
+/** GAME SECTION **/
 .main-section:nth-child(2) {
     /* Colors */
     background-color: var(--color3);
+}
+
+.game-list {
+    /* Layouts */
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-section {
+    /* Layouts */
+    padding: 32px 16px;
+}
+
+.game-image {
+    /* Layouts */
+    width: 600px;
+    border: solid 3px var(--color1);
+    border-radius: 15px;
+
+    /* Image Center */
+    object-fit: cover;
+    object-position: center;
 }
 
 
