@@ -1,3 +1,4 @@
+/* NAVBAR LINK ANIMATION */
 @keyframes link-desc-animate-in {
     0% {
         opacity: .9;
@@ -35,6 +36,14 @@
 }
 
 
+
+
+
+
+
+
+
+
 /* HAMBURGER MENU ANIMATION */
 .nav-menu-toggle span:nth-child(2) {
     transform-origin: 0 0 ;
@@ -42,6 +51,10 @@
 
 .nav-menu-toggle span:nth-child(4) {
     transform-origin: 0 100% ;
+}
+
+.nav-menu-toggle input:checked ~ span {
+    background: var(--color1);
 }
 
 .nav-menu-toggle input:checked ~ span:nth-child(2) {
