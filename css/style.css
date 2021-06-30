@@ -788,6 +788,15 @@ html {
         line-height: 18px;
     }
 
+    .title-section {
+        /* Fonts */
+        letter-spacing: 2px;
+    
+        /* Layouts */
+        padding: 4px;
+        margin: 4px;
+    }
+
 
 
 
