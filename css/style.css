@@ -458,7 +458,12 @@ html {
     object-position: center;
 }
 
-
+.game-desc {
+    /* Fonts */
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 1em;
+}
 
 
 
