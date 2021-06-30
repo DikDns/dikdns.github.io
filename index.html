@@ -25,26 +25,37 @@
     
     <nav id="nav" class="nav">
 
-        <div class="nav-header">
-            <h2>DikDns</h2>
+        <div class="nav-box">
+            <div class="nav-header">
+                <h2>DikDns</h2>
+            </div>
+
+            <div class="nav-lang">
+                <div class="dropdown">
+                    <button onclick="dropdownBtnLang()" class="lang-button"><i class="fas fa-globe"></i> En <i id="arrow-1" class="fas fa-caret-right arrow-icon"></i></button>
+                    <div class="list" id="dropdown-1">
+                        <a class="list-item" href="/id">Bahasa Indonesia</a>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="nav-link">
             <ul>
                 <li  class="link">
-                    <a href="https://dikdns.github.io">
+                    <a href="../">
                         <i class="fas fa-house-user"></i>
                         <p class="link-desc">Home</p>
                     </a>
                 </li>
                 <li class="link">
-                    <a href="https://dikdns.github.io/about">
+                    <a href="/about">
                         <i class="fas fa-question-circle"></i>
                         <p class="link-desc">About</p>
                     </a>
                 </li>
                 <li  class="link">
-                    <a href="https://dikdns.github.io/suggestion">
+                    <a href="/suggestion">
                         <i class="fas fa-comment-dots"></i>
                         <p class="link-desc">Suggestion</p>
                     </a>
