@@ -373,7 +373,7 @@ html {
     /* Layouts */
     width: 724px;
     padding: 4px 0;
-    margin: 4px auto 64px;
+    margin: auto;
 }
 
 
@@ -487,6 +487,18 @@ html {
     /* Layouts */
     padding: 8px 16px;
 }
+
+
+/** Contact Section Paragraf **/
+.main-section:nth-child(3) {
+    /* Layouts */
+    height: 25vh;
+}
+
+.main-section:nth-child(3) .desc-section {
+    margin: auto;
+}
+
 
 
 
