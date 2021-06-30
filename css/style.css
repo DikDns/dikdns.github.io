@@ -591,7 +591,7 @@ html {
 /** Versions **/
 .footer-version {
     /* Layouts */
-    margin: auto;
+    margin: 0 auto 16px;
     grid-area: version;
 
     /* Fonts */
@@ -761,9 +761,7 @@ html {
 
     .desc-section {
         /* Layouts */
-        width: 372px;
-        padding: 4px 0;
-        margin: 4px auto 64px;
+        width: 496px;
     }
     
     .game-image {
@@ -855,5 +853,10 @@ html {
     .game-image {
         /* Layouts */
         width: 400px;
+    }
+
+    .desc-section {
+        /* Layouts */
+        width: 372px;
     }
 }
