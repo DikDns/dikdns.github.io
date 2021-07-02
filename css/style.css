@@ -882,12 +882,12 @@ html {
     /*! MAIN CSS */
     .game-section {
         /* Layouts */
-        padding: 0 8px;
+        padding: 0;
     }
 
     .game-image {
         /* Layouts */
-        width: 80vw;
+        width: 90vw;
     }
 
     .desc-section {
