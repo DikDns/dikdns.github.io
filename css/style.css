@@ -450,6 +450,7 @@ html {
     /* Layouts */
     padding: 0 16px;
     margin-bottom: 288px;
+    box-sizing: border-box;
 }
 
 .game-section .icons {
