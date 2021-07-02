@@ -881,9 +881,14 @@ html {
 
 
     /*! MAIN CSS */
+    .game-section {
+        /* Layouts */
+        padding: 0 8px;
+    }
+
     .game-image {
         /* Layouts */
-        width: 400px;
+        width: 384px;
     }
 
     .desc-section {
