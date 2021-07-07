@@ -82,9 +82,13 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    top: -100px;
 
     /* Layers */
     z-index: 1;
+
+    /* Smooth Animations */
+    transition: all 250ms;
 }
 
 
