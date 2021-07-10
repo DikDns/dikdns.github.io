@@ -756,6 +756,11 @@ html {
 
 
     /*! MAIN CSS RESPONSIVE */
+    .main-section:nth-child(1) {
+        /* Layouts */
+        padding: 64px 0 32px;
+    }
+
     .main-section:nth-child(1) .title {
         /* Fonts */
         font-size: 5em;
