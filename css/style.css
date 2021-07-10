@@ -829,6 +829,7 @@ html {
     /*! FOOTER RESPONSIVE */
     .footer {
         /* Layouts */
+        line-height: 18px;
         grid-template-columns: 1fr;
         grid-template-areas: 
             'link link'
@@ -841,6 +842,12 @@ html {
         padding: 0;
     }
     
+    .desc-footer:nth-child(2) {
+        /* Layouts */
+        margin: auto;
+        width: 285px;
+    }
+
 
     /** Links **/
     .footer-link {
@@ -897,5 +904,21 @@ html {
     .desc-section {
         /* Layouts */
         width: 372px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* !Footer */
+    .desc-footer:nth-child(2) {
+        /* Layouts */
+        width: 256px;
     }
 }
