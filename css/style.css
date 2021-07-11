@@ -940,7 +940,11 @@ html {
     }
 
     .nav-link .link {
-        font-size: 1.5em;
+        font-size: 2em;
+    }
+
+    .nav-link .link .link-desc{
+        display: none;
     }
 
     /* Vertical */
