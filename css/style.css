@@ -382,6 +382,7 @@ html {
 /** Profile Section **/
 .main-section:nth-child(1) {
     /* Layouts for the Profile Section */
+    min-height: 600px;
     height: 100vh;
     padding: 32px 0;
     box-sizing: border-box;
