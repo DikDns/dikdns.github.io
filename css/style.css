@@ -140,6 +140,11 @@ html {
     color: inherit;
 }
 
+.fa-globe, .arrow-icon {
+    /* Layouts unclickable */
+    pointer-events: none;
+}
+
 .lang-dropdown {
     /** Last Box of the Dropdown */
     /* Layouts */
