@@ -1,3 +1,8 @@
+/*! class for the nav to slide down */
+.nav.active {
+    top: 0;
+}
+
 /*! Class For the function button language to Run */
 .show-the-link {
     /** showing the list of language and clickable it */

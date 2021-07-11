@@ -88,7 +88,7 @@ html {
     z-index: 1;
 
     /* Smooth Animations */
-    transition: all 250ms;
+    transition: all 1000ms;
 }
 
 
@@ -670,7 +670,8 @@ html {
         position: absolute;
         right: 0;
         top: 0;
-        transform: translateY(-100%);
+        transform: translateY(-1000px);
+        overflow: auto;
 
         /* Layers */
         z-index: 2;
