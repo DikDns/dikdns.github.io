@@ -140,7 +140,7 @@ html {
     color: inherit;
 }
 
-.dropdown {
+.lang-dropdown {
     /** Last Box of the Dropdown */
     /* Layouts */
     position: relative;
@@ -197,7 +197,7 @@ html {
     color: var(--color2);
 }
 
-.dropdown .arrow-icon {
+.lang-button .arrow-icon {
     /** Arrow Icons inside button language */
     /* Fonts */
     font-size: .75em;
