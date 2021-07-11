@@ -26,12 +26,13 @@ menuToggle.addEventListener('click', function(){
 //! Language Script 
 // select language
 const langBtn = document.querySelector(".lang-button");
-const langArrow = document.querySelector('.lang-button .arrow-icon');
 const langList = document.querySelector(".lang-dropdown .list");
+const langArrow = document.querySelector('.lang-button .arrow-icon');
 
 // Button function to run
 langBtn.addEventListener('click', function(){
     langList.classList.toggle("show-the-link");
+    langArrow.classList.toggle("arrow-rotate");
 });
 
 // Close it if the user click outside of it
@@ -42,6 +43,7 @@ window.onclick = function(event) {
             let openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show-the-link')) {
                 openDropdown.classList.remove('show-the-link');
+                langArrow.classList.remove("arrow-rotate");
             }
         }
     }
