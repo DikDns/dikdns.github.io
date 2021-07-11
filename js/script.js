@@ -1,5 +1,5 @@
-// When the user scrolls down 20px from the top of the document, slide down the navbar
-// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+// When the user scrolls down 250px from the top of the document, slide down the navbar
+// When the user scrolls to the top of the page, slide up the navbar (250px out of the top view)
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -23,17 +23,16 @@ menuToggle.addEventListener('click', function(){
 });
 
 
+//! Language Script 
+// select language
+const langBtn = document.querySelector(".lang-button");
+const langArrow = document.querySelector('.lang-button .arrow-icon');
+const langList = document.querySelector(".lang-dropdown .list");
 
-// select button
-var btn1 = document.getElementById("dropdown-1");
-var arrow1 = document.getElementById('arrow-1');
-
-
-// Button function
-function dropdownBtnLang() {
-    btn1.classList.toggle("show-the-link");
-};
-
+// Button function to run
+langBtn.addEventListener('click', function(){
+    langList.classList.toggle("show-the-link");
+});
 
 // Close it if the user click outside of it
 window.onclick = function(event) {
