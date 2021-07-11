@@ -928,7 +928,7 @@ html {
     }
 }
 
-
+/*! Smartwatch Size */
 @media screen and (max-height: 420px) {
     /*! Nav */
     .nav-link ul {
@@ -941,4 +941,15 @@ html {
 
     .nav-link .link {
         font-size: 1.5em;
+    }
+
+    /* Vertical */
+    @media screen and (max-width: 420px) {
+        /*! Nav */
+        .nav-link ul {
+            /* Layouts */
+            flex-direction: column;
+            overflow: auto;
+        }
+    }
 }
