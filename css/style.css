@@ -672,7 +672,6 @@ html {
         right: 0;
         top: 0;
         transform: translateY(-1000px);
-        overflow: auto;
 
         /* Layers */
         z-index: 2;
@@ -927,4 +926,19 @@ html {
         /* Layouts */
         width: 256px;
     }
+}
+
+
+@media screen and (max-height: 420px) {
+    /*! Nav */
+    .nav-link ul {
+        /* Layouts */
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        overflow: auto;
+    }
+
+    .nav-link .link {
+        font-size: 1.5em;
 }
