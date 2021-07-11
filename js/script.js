@@ -50,7 +50,7 @@ langBtn.addEventListener('click', function(){
 
 
 //! Close it if the user click outside of it
-window.onclick = function(event) {
+window.addEventListener('click', function(event) {
     if (!event.target.matches('.lang-button')){
         let dropdowns = document.getElementsByClassName("list");
         for(let i = 0; i < dropdowns.length; i++){
@@ -65,4 +65,4 @@ window.onclick = function(event) {
         navLink.classList.remove('slide');
         document.querySelector('.btn-toggle').checked = false;
     }
-};
+});
