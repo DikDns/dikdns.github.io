@@ -14,6 +14,7 @@ const langArrow = document.querySelector('.lang-button .arrow-icon');
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+    // To check if the user active the menu hamburger it will not slide to top
     if  (!document.querySelector('.nav-link').classList.contains('slide')){
         if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
             nav.classList.add('active');
@@ -27,7 +28,15 @@ function scrollFunction() {
 
 //! Hamburger Menu Script
 menuToggle.addEventListener('click', function(){
-    navLink.classList.toggle('slide')
+    // To remove active class when user close the navLink
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250){
+        navLink.classList.toggle('slide');
+    } else {
+        if (navLink.classList.contains('slide')){
+            nav.classList.remove('active');
+            navLink.classList.toggle('slide');
+        }
+    }
 });
 
 
@@ -53,7 +62,7 @@ window.onclick = function(event) {
         }
     }
     if (!event.target.matches('.btn-toggle')){
-        nav.classList.remove('slide');
+        navLink.classList.remove('slide');
         document.querySelector('.btn-toggle').checked = false;
     }
 };
