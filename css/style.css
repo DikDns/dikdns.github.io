@@ -207,12 +207,6 @@ html {
     transform: rotate(0deg);
 }
 
-.lang-button:focus > .arrow-icon {
-    /* Change direction of arrow icons when focused */
-    transition: transform 500ms;
-    transform: rotate(90deg);
-}
-
 
 /** Right NavBar: Link and Hamburger Menu **/
 .nav-link ul {

@@ -10,3 +10,10 @@
     opacity: 1;
     transform: translateY(0);
 }   
+
+
+/*! CLASS FOR THE ARROW TO ANIMATE */
+.arrow-icon.arrow-rotate {
+    /* Change direction of arrow icons when focused */
+    transform: rotate(90deg);
+}
